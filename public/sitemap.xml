@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.salmadey.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.salmadey.com/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.salmadey.com/ar/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Jewellery Collection -->
+  <url>
+    <loc>https://www.salmadey.com/jewellery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.salmadey.com/jewellery" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.salmadey.com/ar/jewellery" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- The Maison -->
+  <url>
+    <loc>https://www.salmadey.com/maison</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.salmadey.com/maison" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.salmadey.com/ar/maison" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Appointments -->
+  <url>
+    <loc>https://www.salmadey.com/appointments</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.salmadey.com/appointments" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.salmadey.com/ar/appointments" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact -->
+  <url>
+    <loc>https://www.salmadey.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.salmadey.com/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.salmadey.com/ar/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
