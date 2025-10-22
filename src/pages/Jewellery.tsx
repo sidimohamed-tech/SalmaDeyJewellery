@@ -25,7 +25,7 @@ const Jewellery = () => {
         category: "earrings_and_rings",
         title: "Earrings and Rings",
         image:
-          "https://storage.cloud.google.com/ghrini-images-prod/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0057.jpg",
+          "https://storage.cloud.google.com/ghrini-images-prod/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0058.jpg",
         link: "/jewellery/earrings-and-rings",
       },
       {
