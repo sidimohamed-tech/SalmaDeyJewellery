@@ -67,7 +67,7 @@ const Jewellery = () => {
                   <img
                     src={category.image}
                     alt={`${category.category} category`}
-                    className="w-[80vw] sm:w-[50vw] md:w-[31vw] aspect-[450/620] object-cover rounded-lg shadow-md border border-gold cursor-pointer rounded-[20px]"
+                    className="w-[80vw] sm:w-[50vw] md:w-[31vw] aspect-[450/620] object-cover rounded-lg shadow-md border border-gold cursor-pointer rounded-[20px] m-auto"
                     onClick={() => setPopupImage(category.image)}
                   />
                 </a>

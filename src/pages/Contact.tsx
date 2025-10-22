@@ -115,6 +115,19 @@ const Contact = () => {
                         </a>
                       </div>
                     </div>
+
+                    <div className="flex items-start gap-4">
+                      <MessageCircle className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-medium mb-1">Email</p>
+                        <a
+                          href="mailto:salma.deye@gmail.com"
+                          className="text-gold hover:text-gold-dark transition-fast"
+                        >
+                          salma.deye@gmail.com
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

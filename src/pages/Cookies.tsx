@@ -21,12 +21,7 @@ const Cookies = () => {
           </h1>
           <p className="mt-4 text-neutral-700">
             We use <strong>essential cookies only</strong> to operate this
-            website. Consent is stored for <strong>6 months</strong>. You can
-            review your choice anytime on{" "}
-            <Link href="/cookies/settings" className="text-amber-600 underline">
-              Cookies Settings
-            </Link>
-            .
+            website. Consent is stored for <strong>6 months</strong>.
           </p>
           <section className="mt-10 space-y-8">
             <div>

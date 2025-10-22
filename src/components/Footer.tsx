@@ -18,11 +18,17 @@ export const Footer = () => {
             <div className="space-y-2 text-sm">
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-gold" />
-                <span>
-                  {t("footer.address")}
-                  <br />
-                  {t("footer.city")}
-                </span>
+                <a
+                  href="https://maps.app.goo.gl/2eg3WDJ88WGeQgWq6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    {t("footer.address")}
+                    <br />
+                    {t("footer.city")}
+                  </span>
+                </a>
               </p>
               <p className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 flex-shrink-0 text-gold" />
@@ -31,6 +37,18 @@ export const Footer = () => {
                   className="hover:text-gold transition-fast"
                 >
                   +222 26 31 45 95 (WhatsApp)
+                </a>
+              </p>
+            </div>
+            {/* Contact Email */}
+            <div className="mt-4 text-sm">
+              <p className="flex items-center gap-2">
+                <MessageCircle className="w-4 h-4 flex-shrink-0 text-gold" />
+                <a
+                  href="mailto:salma.deye@gmail.com"
+                  className="hover:text-gold transition-fast"
+                >
+                  salma.deye@gmail.com
                 </a>
               </p>
             </div>

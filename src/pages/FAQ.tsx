@@ -122,11 +122,25 @@ export default function Page() {
                 Where is your boutique?
               </h2>
               <p className="mt-2 text-neutral-700">
-                Dey Mall, Avenue Mokhtar Daddah (Mauritania). See{" "}
-                <Link href="/contact" className="text-amber-600 underline">
+                Dey Mall, Avenue Mokhtar Daddah (Mauritania).
+                <a
+                  href="https://maps.app.goo.gl/2eg3WDJ88WGeQgWq6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+    inline-block
+    text-[#B78915] font-medium
+    underline underline-offset-4 decoration-[#B78915]
+    hover:text-[#946d10] hover:decoration-[#946d10]
+    transition-colors duration-200
+    text-sm sm:text-base
+  "
+                >
+                  Click here
+                </a>
+                {/* <Link href="/contact" className="text-amber-600 underline">
                   Contact
-                </Link>{" "}
-                for map and hours.
+                </Link>{" "} */}
               </p>
             </div>
           </section>

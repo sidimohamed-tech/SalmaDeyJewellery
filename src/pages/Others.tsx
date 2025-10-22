@@ -38,23 +38,36 @@ const Others = () => {
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {images.map((src, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="relative overflow-hidden">
                 <img
                   src={src}
                   alt={`Product ${index + 1}`}
-                  className="w-[80vw] sm:w-[50vw] md:w-[31vw] aspect-[450/620] object-cover rounded-lg shadow-md border border-gold cursor-pointer rounded-[20px]"
+                  className="w-full aspect-[450/620] object-cover block shadow-md border border-gold cursor-pointer"
                   onClick={() => setPopupImage(src)}
                 />
+
                 <button
-                  className="absolute bottom-2 right-2 bg-green-500 text-white px-4 py-2 rounded flex items-center gap-2"
+                  className="
+          absolute bottom-1 right-1
+          bg-green-500 text-white
+           flex items-center gap-2 shadow-md
+          px-2 py-1 text-xs
+          whitespace-nowrap truncate
+          max-w-[72%] overflow-hidden
+          hover:bg-green-600 transition-colors duration-200
+
+          sm:bottom-1 sm:right-1 sm:px-2 sm:py-1 sm:text-xs sm:max-w-[75%]
+          md:bottom-2 md:right-2 md:px-3 md:py-1.5 md:text-sm md:max-w-[80%]
+          lg:px-4 lg:py-2 lg:text-base lg:max-w-none
+        "
                   onClick={() => handleInquiry(src)}
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                     alt="WhatsApp Icon"
-                    className="w-5 h-5"
+                    className="w-4 h-4 md:w-5 md:h-5 shrink-0"
                   />
-                  WhatsApp
+                  <span>WhatsApp</span>
                 </button>
               </div>
             ))}
