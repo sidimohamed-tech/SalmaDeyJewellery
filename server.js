@@ -36,7 +36,7 @@ getKeyFromSecretManager().then((key) => {
 // Middleware pour vérifier l'origine
 app.use((req, res, next) => {
   const referer = req.headers.referer || '';
-  if (!referer.includes("localhost") && !referer.includes("192.168.1.129") && !referer.includes("https://salma-dey-jewellery.vercel.app/") && referer !== '') {
+  if (!referer.includes("localhost") && !referer.includes("192.168.1.129") && !referer.includes("https://salma-dey-jewellery.vercel.app") && referer !== '') {
     return res.status(403).send("Accès interdit");
   }
   next();
