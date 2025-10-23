@@ -41,6 +41,9 @@ const Index = () => {
     return () => clearInterval(interval); // Nettoie l'intervalle à la fin
   }, [images]);
 
+  const baseUrl =
+    process.env.REACT_APP_BASE_URL || "https://salma-dey-jewellery.vercel.app";
+
   return (
     <div className="min-h-screen">
       <SEO
@@ -172,28 +175,28 @@ const Index = () => {
               {/* Advertisement Videos */}
               <div>
                 <video
-                  src="/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.26.27_a1553c8d.mp4"
+                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.26.27_a1553c8d.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </div>
               <div>
                 <video
-                  src="/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.35.58_9b36d675.mp4"
+                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.35.58_9b36d675.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </div>
               <div>
                 <video
-                  src="/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.37.46_9763c1c4.mp4"
+                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.37.46_9763c1c4.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </div>
               <div>
                 <video
-                  src="/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.38.04_0920cc8d.mp4"
+                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.38.04_0920cc8d.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
