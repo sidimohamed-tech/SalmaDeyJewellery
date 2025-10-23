@@ -17,22 +17,20 @@ const Jewellery = () => {
       {
         category: "sets",
         title: "Sets",
-        image:
-          "https://storage.cloud.google.com/ghrini-images-prod/produits/ensembles/IMG-20251016-WA0049.jpg",
+        image: "http://localhost:3000/images/ensembles/IMG-20251016-WA0049.jpg",
         link: "/jewellery/sets",
       },
       {
         category: "earrings_and_rings",
         title: "Earrings and Rings",
         image:
-          "https://storage.cloud.google.com/ghrini-images-prod/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0058.jpg",
+          "http://localhost:3000/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0058.jpg",
         link: "/jewellery/earrings-and-rings",
       },
       {
         category: "others",
         title: "Others",
-        image:
-          "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0020.jpg",
+        image: "http://localhost:3000/images/autres/IMG-20251016-WA0020.jpg",
         link: "/jewellery/others",
       },
     ];

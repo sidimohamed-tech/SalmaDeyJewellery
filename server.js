@@ -29,9 +29,18 @@ getKeyFromSecretManager().then((key) => {
 // Middleware pour vérifier l'origine
 app.use((req, res, next) => {
   const referer = req.headers.referer || '';
-  if (!referer.includes("localhost") && !referer.includes("votre-domaine.com") && referer !== '') {
+  if (!referer.includes("localhost") && !referer.includes("192.168.1.129") && referer !== '') {
     return res.status(403).send("Accès interdit");
   }
+  next();
+});
+
+// Middleware pour ajuster les URLs des images selon le réseau
+app.use((req, res, next) => {
+  const host = req.headers.host;
+  const baseUrl = host.includes("localhost") ? "http://localhost:3000" : `http://${host}`;
+
+  req.baseUrl = baseUrl; // Ajoute baseUrl à l'objet req pour utilisation dans les routes
   next();
 });
 
@@ -51,6 +60,7 @@ app.get("/images/:fileName", async (req, res) => {
   }
 });
 
+// Route pour servir les images avec baseUrl dynamique
 app.get("/images/:category/:fileName", async (req, res) => {
   const { category, fileName } = req.params;
   const file = storage.bucket(bucketName).file(`produits/${category}/${fileName}`);
@@ -60,7 +70,7 @@ app.get("/images/:category/:fileName", async (req, res) => {
       action: "read",
       expires: Date.now() + 15 * 60 * 1000, // URL valide pendant 15 minutes
     });
-    res.redirect(url);
+    res.redirect(url.replace("http://localhost:3000", req.baseUrl)); // Remplace localhost par l'URL réseau
   } catch (error) {
     res.status(404).send("Fichier introuvable");
   }
