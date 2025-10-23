@@ -2,17 +2,29 @@ import express from "express";
 import { Storage } from "@google-cloud/storage";
 import path from "path";
 import { fileURLToPath } from "url";
+import { SecretManagerServiceClient } from "@google-cloud/secret-manager";
 
 const app = express();
 const PORT = 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Initialiser Google Cloud Storage
-const storage = new Storage({
-  keyFilename: path.join(__dirname, "mes-photos-475322-a0fce2bd79ef.json"), // Chemin mis à jour vers votre clé JSON
+const bucketName = "ghrini-images-prod"; // Nom du bucket Google Cloud Storage
+
+// Fonction pour récupérer la clé depuis Google Secret Manager
+async function getKeyFromSecretManager() {
+  const client = new SecretManagerServiceClient();
+  const [version] = await client.accessSecretVersion({
+    name: "projects/mes-photos-475322/secrets/mes-photos-key/versions/latest",
+  });
+  return JSON.parse(version.payload.data.toString());
+}
+
+// Initialiser Google Cloud Storage avec la clé récupérée
+let storage;
+getKeyFromSecretManager().then((key) => {
+  storage = new Storage({ credentials: key });
 });
-const bucketName = "ghrini-images-prod";
 
 // Middleware pour vérifier l'origine
 app.use((req, res, next) => {

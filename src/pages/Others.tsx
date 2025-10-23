@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 
 const Others = () => {
   const images = [
-    "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0020.jpg",
-    "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0024.jpg",
-    "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0025.jpg",
-    "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0026.jpg",
-    "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0027.jpg",
-    "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0028.jpg",
-    "https://storage.cloud.google.com/ghrini-images-prod/produits/autres/IMG-20251016-WA0061.jpg",
+    "http://localhost:3000/images/autres/IMG-20251016-WA0020.jpg",
+    "http://localhost:3000/images/autres/IMG-20251016-WA0024.jpg",
+    "http://localhost:3000/images/autres/IMG-20251016-WA0025.jpg",
+    "http://localhost:3000/images/autres/IMG-20251016-WA0026.jpg",
+    "http://localhost:3000/images/autres/IMG-20251016-WA0027.jpg",
+    "http://localhost:3000/images/autres/IMG-20251016-WA0028.jpg",
+    "http://localhost:3000/images/autres/IMG-20251016-WA0061.jpg",
   ];
 
   const [popupImage, setPopupImage] = useState<string | null>(null);
