@@ -24,6 +24,13 @@ async function getKeyFromSecretManager() {
 let storage;
 getKeyFromSecretManager().then((key) => {
   storage = new Storage({ credentials: key });
+
+  // Démarrer le serveur après l'initialisation de storage
+  app.listen(PORT, () => {
+    console.log(`Serveur en cours d'exécution sur http://localhost:${PORT}`);
+  });
+}).catch((error) => {
+  console.error("Erreur lors de l'initialisation de Google Cloud Storage:", error);
 });
 
 // Middleware pour vérifier l'origine
@@ -41,6 +48,14 @@ app.use((req, res, next) => {
   const baseUrl = host.includes("localhost") ? "http://localhost:3000" : `http://${host}`;
 
   req.baseUrl = baseUrl; // Ajoute baseUrl à l'objet req pour utilisation dans les routes
+  next();
+});
+
+// Middleware pour vérifier si storage est défini
+app.use((req, res, next) => {
+  if (!storage) {
+    return res.status(500).send("Le service de stockage n'est pas encore prêt. Veuillez réessayer plus tard.");
+  }
   next();
 });
 
