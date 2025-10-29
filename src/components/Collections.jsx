@@ -5,17 +5,17 @@ const Collections = () => {
   const categories = [
     {
       title: "Sets",
-      image: "http://localhost:3000/images/ensembles/IMG-20251016-WA0014.jpg",
+      image: "/produits/ensembles/IMG-20251016-WA0014.jpg",
       link: "/jewellery/sets",
     },
     {
       title: "Earrings & Rings",
-      image: "http://localhost:3000/images/ensembles/IMG-20251016-WA0016.jpg",
+      image: "/produits/ensembles/IMG-20251016-WA0016.jpg",
       link: "/jewellery/earrings-and-rings",
     },
     {
       title: "Others",
-      image: "http://localhost:3000/images/autres/IMG-20251016-WA0020.jpg",
+      image: "/produits/autres/IMG-20251016-WA0020.jpg",
       link: "/jewellery/others",
     },
   ];
