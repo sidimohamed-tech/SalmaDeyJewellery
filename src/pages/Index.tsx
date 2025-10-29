@@ -20,20 +20,17 @@ const Index = () => {
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // État pour l'image active
 
-  const baseUrl =
-    process.env.REACT_APP_BASE_URL || "https://salma-dey-jewellery.vercel.app";
-
   useEffect(() => {
-    // Liste des images aléatoires
-    const randomImages = [
-      `${baseUrl}/images/ensembles/IMG-20251016-WA0001.jpg`,
-      `${baseUrl}/images/ensembles/IMG-20251016-WA0006.jpg`,
-      `${baseUrl}/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0082.jpg`,
-      `${baseUrl}/images/ensembles/IMG-20251016-WA0003.jpg`,
-      `${baseUrl}/images/ensembles/IMG-20251016-WA0008.jpg`,
+    // Liste des images locales
+    const localImages = [
+      "/produits/ensembles/IMG-20251016-WA0001.jpg",
+      "/produits/ensembles/IMG-20251016-WA0006.jpg",
+      "/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0082.jpg",
+      "/produits/ensembles/IMG-20251016-WA0003.jpg",
+      "/produits/ensembles/IMG-20251016-WA0008.jpg",
     ];
-    console.log("Generated image URLs:", randomImages); // Log temporaire pour vérifier les URLs
-    setImages(randomImages.sort(() => Math.random() - 0.5)); // Mélange aléatoire
+    console.log("Generated local image URLs:", localImages); // Log temporaire pour vérifier les URLs
+    setImages(localImages.sort(() => Math.random() - 0.5)); // Mélange aléatoire
   }, []);
 
   useEffect(() => {
@@ -176,28 +173,28 @@ const Index = () => {
               {/* Advertisement Videos */}
               <div>
                 <video
-                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.26.27_a1553c8d.mp4`}
+                  src={`/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.26.27_a1553c8d.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </div>
               <div>
                 <video
-                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.35.58_9b36d675.mp4`}
+                  src={`/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.35.58_9b36d675.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </div>
               <div>
                 <video
-                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.37.46_9763c1c4.mp4`}
+                  src={`/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.37.46_9763c1c4.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               </div>
               <div>
                 <video
-                  src={`${baseUrl}/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.38.04_0920cc8d.mp4`}
+                  src={`/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.38.04_0920cc8d.mp4`}
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />

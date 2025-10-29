@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 
 const Others = () => {
   const images = [
-    "http://localhost:3000/images/autres/IMG-20251016-WA0020.jpg",
-    "http://localhost:3000/images/autres/IMG-20251016-WA0024.jpg",
-    "http://localhost:3000/images/autres/IMG-20251016-WA0025.jpg",
-    "http://localhost:3000/images/autres/IMG-20251016-WA0026.jpg",
-    "http://localhost:3000/images/autres/IMG-20251016-WA0027.jpg",
-    "http://localhost:3000/images/autres/IMG-20251016-WA0028.jpg",
-    "http://localhost:3000/images/autres/IMG-20251016-WA0061.jpg",
+    "/produits/autres/IMG-20251016-WA0020.jpg",
+    "/produits/autres/IMG-20251016-WA0024.jpg",
+    "/produits/autres/IMG-20251016-WA0025.jpg",
+    "/produits/autres/IMG-20251016-WA0026.jpg",
+    "/produits/autres/IMG-20251016-WA0027.jpg",
+    "/produits/autres/IMG-20251016-WA0028.jpg",
+    "/produits/autres/IMG-20251016-WA0061.jpg",
   ];
 
   const [popupImage, setPopupImage] = useState<string | null>(null);
