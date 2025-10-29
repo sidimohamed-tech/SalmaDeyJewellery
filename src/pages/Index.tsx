@@ -20,15 +20,19 @@ const Index = () => {
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // État pour l'image active
 
+  const baseUrl =
+    process.env.REACT_APP_BASE_URL || "https://salma-dey-jewellery.vercel.app";
+
   useEffect(() => {
     // Liste des images aléatoires
     const randomImages = [
-      "http://localhost:3000/images/ensembles/IMG-20251016-WA0001.jpg",
-      "http://localhost:3000/images/ensembles/IMG-20251016-WA0006.jpg",
-      "http://localhost:3000/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0082.jpg",
-      "http://localhost:3000/images/ensembles/IMG-20251016-WA0003.jpg",
-      "http://localhost:3000/images/ensembles/IMG-20251016-WA0008.jpg",
+      `${baseUrl}/images/ensembles/IMG-20251016-WA0001.jpg`,
+      `${baseUrl}/images/ensembles/IMG-20251016-WA0006.jpg`,
+      `${baseUrl}/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0082.jpg`,
+      `${baseUrl}/images/ensembles/IMG-20251016-WA0003.jpg`,
+      `${baseUrl}/images/ensembles/IMG-20251016-WA0008.jpg`,
     ];
+    console.log("Generated image URLs:", randomImages); // Log temporaire pour vérifier les URLs
     setImages(randomImages.sort(() => Math.random() - 0.5)); // Mélange aléatoire
   }, []);
 
@@ -40,9 +44,6 @@ const Index = () => {
 
     return () => clearInterval(interval); // Nettoie l'intervalle à la fin
   }, [images]);
-
-  const baseUrl =
-    process.env.REACT_APP_BASE_URL || "https://salma-dey-jewellery.vercel.app";
 
   return (
     <div className="min-h-screen">
