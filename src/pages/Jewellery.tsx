@@ -17,20 +17,20 @@ const Jewellery = () => {
       {
         category: "sets",
         title: "Sets",
-        image: "http://localhost:3000/images/ensembles/IMG-20251016-WA0049.jpg",
+        image: "/produits/ensembles/IMG-20251016-WA0049.jpg",
         link: "/jewellery/sets",
       },
       {
         category: "earrings_and_rings",
         title: "Earrings and Rings",
         image:
-          "http://localhost:3000/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0058.jpg",
+          "/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0058.jpg",
         link: "/jewellery/earrings-and-rings",
       },
       {
         category: "others",
         title: "Others",
-        image: "http://localhost:3000/images/autres/IMG-20251016-WA0020.jpg",
+        image: "/produits/autres/IMG-20251016-WA0020.jpg",
         link: "/jewellery/others",
       },
     ];

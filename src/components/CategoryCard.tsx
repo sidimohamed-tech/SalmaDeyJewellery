@@ -26,22 +26,22 @@ export const CategoryCard = ({
   console.log("mes images", image);
 
   useEffect(() => {
-    // Liste des images aléatoires
+    // Liste des images locales
     const randomImages = [
       //categorie Sets
-      "http://localhost:3000/images/ensembles/IMG-20251016-WA0001.jpg",
-      "http://localhost:3000/images/ensembles/IMG-20251016-WA0006.jpg",
-      "http://localhost:3000/images/ensembles/IMG-20251016-WA0008.jpg",
+      "/produits/ensembles/IMG-20251016-WA0001.jpg",
+      "/produits/ensembles/IMG-20251016-WA0006.jpg",
+      "/produits/ensembles/IMG-20251016-WA0008.jpg",
       //categorie Earrings and Rings
-      "http://localhost:3000/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0058.jpg",
-      "http://localhost:3000/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0064.jpg",
-      "http://localhost:3000/images/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0079.jpg",
+      "/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0058.jpg",
+      "/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0064.jpg",
+      "/produits/boucles%20d'oreille%20et%20bagues/IMG-20251016-WA0079.jpg",
       //categorie autres
-      "http://localhost:3000/images/autres/IMG-20251016-WA0020.jpg",
-      "http://localhost:3000/images/autres/IMG-20251016-WA0027.jpg",
-      "http://localhost:3000/images/autres/IMG-20251016-WA0028.jpg",
+      "/produits/autres/IMG-20251016-WA0020.jpg",
+      "/produits/autres/IMG-20251016-WA0027.jpg",
+      "/produits/autres/IMG-20251016-WA0028.jpg",
     ];
-    // setImages(randomImages.sort(() => Math.random() - 0.5)); // Mélange aléatoire
+    setImages(randomImages.sort(() => Math.random() - 0.5)); // Mélange aléatoire
   }, []);
   return (
     <Suspense
