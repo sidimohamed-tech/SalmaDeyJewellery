@@ -10,7 +10,7 @@ import Collections from "../components/Collections";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 
 const MotionDiv = lazy(() =>
-  import("framer-motion").then((mod) => ({ default: mod.motion.div }))
+  import("framer-motion").then((mod) => ({ default: mod.motion.div })),
 );
 
 const Index = () => {
@@ -171,7 +171,7 @@ const Index = () => {
               </div>
 
               {/* Advertisement Videos */}
-              <div>
+              {/* <div>
                 <video
                   src={`/produits/Nouveau%20dossier/WhatsApp%20Vid%C3%A9o%202025-10-15%20%C3%A0%2020.26.27_a1553c8d.mp4`}
                   controls
@@ -198,7 +198,7 @@ const Index = () => {
                   controls
                   className="w-full h-auto rounded-lg shadow-md"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
